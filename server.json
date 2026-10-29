@@ -1,0 +1,42 @@
+{
+	"$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+	"name": "io.github.Fredobumma/shutterstock-mcp",
+	"title": "Shutterstock",
+	"description": "Search Shutterstock photos, footage, music and news images; preview, collect and license them.",
+	"repository": {
+		"url": "https://github.com/fredobumma/shutterstock-mcp",
+		"source": "github"
+	},
+	"version": "0.1.0",
+	"packages": [
+		{
+			"registryType": "pypi",
+			"identifier": "shutterstock-mcp",
+			"version": "0.1.0",
+			"transport": {
+				"type": "stdio"
+			},
+			"environmentVariables": [
+				{
+					"name": "SHUTTERSTOCK_API_KEY",
+					"description": "Your Shutterstock app's consumer key, for searching",
+					"isSecret": true
+				},
+				{
+					"name": "SHUTTERSTOCK_API_SECRET",
+					"description": "Your Shutterstock app's consumer secret",
+					"isSecret": true
+				},
+				{
+					"name": "SHUTTERSTOCK_API_TOKEN",
+					"description": "Or an OAuth access token, for collections, license history and licensing",
+					"isSecret": true
+				},
+				{
+					"name": "SHUTTERSTOCK_ENABLE_LICENSING",
+					"description": "Set to true to add the license_asset tool, which spends your subscription"
+				}
+			]
+		}
+	]
+}

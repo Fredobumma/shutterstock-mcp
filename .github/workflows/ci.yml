@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.12', '3.14']
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v7
+        with:
+          python-version: ${{ matrix.python }}
+      - run: uv venv && uv pip install -e . pytest anyio ruff mypy
+      - run: .venv/bin/ruff format --check . && .venv/bin/ruff check .
+      - run: .venv/bin/mypy
+      - run: .venv/bin/pytest
