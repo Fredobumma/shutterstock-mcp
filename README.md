@@ -74,7 +74,7 @@ Free Shutterstock apps search a smaller part of the library, see only the first 
 
 ## Status
 
-Built from Shutterstock's API reference and its official SDK's models, and tested against a fake of the API that checks what the server sends, through a real MCP client. It hasn't yet been run against the live API; if something doesn't match, please [open an issue](https://github.com/fredobumma/shutterstock-mcp/issues).
+Built from Shutterstock's API reference and its official SDK's models, checked against the live API, and tested against a fake of the API that checks what the server sends, through a real MCP client. If something doesn't match, please [open an issue](https://github.com/fredobumma/shutterstock-mcp/issues).
 
 ## Development
 
