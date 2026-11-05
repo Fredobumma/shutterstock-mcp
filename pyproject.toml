@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "shutterstock-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "An MCP server for Shutterstock: search photos, footage, music and editorial images, look at previews, find similar images, manage collections, and license with your own subscription."
 readme = "README.md"
 license = "MIT"
